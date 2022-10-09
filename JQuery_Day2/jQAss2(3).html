@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+</head>
+
+<body>
+    <div style="background-color: rgb(198, 198, 142); padding: 20px; padding-right: 0px;">
+        <h1>The Accordion</h1>
+        <div id="acc">
+            <h1>C#</h1>
+            <div>
+                <p>C# is an object oriented language which gives a clear structure to programs and allows code to be
+                    reused, lowering development costs.</p>
+            </div>
+
+            <h1>LINQ</h1>
+            <div>
+                <p>LinQ is a ' Language Integrated Query .' LINQ provides the new way to manipulate the data, whether it
+                    is to or from the database or with an XML file or with a simple list of dynamic data. </p>
+            </div>
+
+            <h1>jQuery UI</h1>
+            <div>
+                <p>jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top
+                    of the jQuery JavaScript Library. </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#acc').accordion();
+        });
+    </script>
+</body>
+
+</html>
