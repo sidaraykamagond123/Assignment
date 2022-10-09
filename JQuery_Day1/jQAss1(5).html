@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery_Assignment5</title>
+    <script src="jquery-3.6.1.js"></script>
+</head>
+<body>
+    <input type="text" id="text" onkeyup="manage(this)"/>
+    <button id="btsubmit" disabled="true">Login</button>
+    <script>
+        function manage(txt){
+            var bt=document.getElementById('btsubmit');
+            if(txt.value!=''){
+                bt.disabled =false;
+
+            }
+            else{
+                bt.disabled=true;
+            }
+        }
+    </script>
+</body>
+</html>
