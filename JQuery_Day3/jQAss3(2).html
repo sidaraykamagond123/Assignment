@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+        .container{
+            border: 2px solid black;
+            background-color: bisque;
+            width: 40%;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p style="margin-top: 0;"><b> Fetching Data Using jquery AJAX GET Request.</b></p>
+        <select name="todo" id="todo"></select>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $.ajax({
+            url:'https://jsonplaceholder.typicode.com/todos',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data){
+                var initialOption= `<option value=""selected disabled>Expand to view data</option>`
+                var result=``
+                data.forEach(data =>
+                {
+                    result += `<option>${data.title}</option>`
+                })
+                $('#todo').html(initialOption +result)
+
+            } 
+        })
+    })
+    </script>
+    
+</body>
+</html>
